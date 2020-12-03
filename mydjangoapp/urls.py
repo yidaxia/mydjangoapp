@@ -22,4 +22,5 @@ router = routers.DefaultRouter()
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
+    path('system/', include('system.urls')),
 ]

@@ -117,7 +117,7 @@ class Dict(SoftModel):
     code = models.CharField('编号', max_length=30, null=True, blank=True)
     fullname = models.CharField('全名', max_length=1000, null=True, blank=True)
     description = models.TextField('描述', blank=True, null=True)
-    other = JSONField('其他信息', blank=True, null=True)
+    # other = JSONField('其他信息', blank=True, null=True)
     type = models.ForeignKey(DictType, on_delete=models.CASCADE, verbose_name='类型')
     sort = models.IntegerField('排序', default=1)
     parent = models.ForeignKey('self', null=True, blank=True, on_delete=models.SET_NULL, verbose_name='父')
